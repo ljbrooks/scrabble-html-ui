@@ -8,7 +8,7 @@
         direction: function (now) {return (now < 0 ? -1 : 1);},
         degrees: function (now) {return (Math.floor(Math.abs(now))) % 360;},
         scale: function (degrees) {return (1 - (degrees % 180) / 90)
-                                            * (degrees >= 180 ? -1 : 1);}
+                                   * (degrees >= 180 ? -1 : 1);}
     }
     
     // Custom animator
@@ -114,8 +114,8 @@
             var direction = -1;
             if (
                 typeof options == 'object'
-                && options['direction']
-                && options['direction'] == 'clockwise'
+                    && options['direction']
+                    && options['direction'] == 'clockwise'
             ) {
                 direction = 1;
             }
